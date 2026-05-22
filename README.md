@@ -268,7 +268,7 @@ Currently focused on:
 
 - **LinkedIn**: [linkedin.com/in/abinash-nayak-9079b221b](https://www.linkedin.com/in/abinash-nayak-9079b221b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 - **Portfolio**: [abinash-nayak-portfolio.netlify.app](https://abinash-nayak-portfolio.netlify.app)
-- **Email**: [abinash.tech.ai@gmail.com](mailto:abinash.tech.ai@gmail.com)
+- **Email**: [abinash.backend@gmail.com](mailto:abinash.backend@gmail.com)
 
 ---
 
