@@ -8,9 +8,9 @@ Based in India | MCA – Biju Patnaik University of Technology (BPUT), 2024
 
 ## Introduction
 
-Backend engineer passionate about designing and building scalable backend systems. Experienced in developing robust REST APIs, implementing secure authentication mechanisms, architecting production-ready systems, and enforcing clear domain boundaries through modular architecture. I specialize in clean code, system design principles, and translating business requirements into maintainable backend solutions.
+Backend engineer specializing in production-oriented Spring Boot systems with emphasis on transactional consistency, security architecture, and modular design. Built two complete domain-driven backend services—a travel booking platform with payment processing and Redis caching, and a workflow execution system with task orchestration and idempotency enforcement—demonstrating expertise across authentication, authorization, database design, and containerized deployment.
 
-My portfolio demonstrates practical expertise across multiple domains: travel booking systems with payment integration, workflow execution platforms with task orchestration, and complex authentication/authorization patterns. Each project follows production-oriented practices including containerization, API documentation, and comprehensive testing strategies.
+**Core competencies:** Domain-driven architecture, modular monolith patterns, REST API design, JWT + RBAC security, PostgreSQL transactional integrity, Redis caching strategies, and Dockerized deployment pipelines. Architectural decisions based on constraints and trade-offs, not hype.
 
 ---
 
@@ -34,14 +34,15 @@ My approach combines theoretical understanding of system design with practical i
 ### 1. TripOps | Travel Booking & Inventory Management Service
 **Repository**: [tripops-backend](https://github.com/abinash-backend/tripops-backend)
 
-A production-grade Spring Boot backend for travel booking workflows, package inventory management, secure payment processing, and operational API flows. Implemented as a modular monolith with explicit domain boundaries.
+A production-grade Spring Boot backend for travel booking workflows, package inventory management, secure payment processing, and operational API flows. Implemented as a modular monolith with explicit domain boundaries, RBAC enforcement, and Redis-backed caching for high-read paths.
 
 **Key Features**:
 - Stateless JWT authentication with RBAC (USER, ADMIN roles)
 - Package catalog management with inventory tracking and capacity constraints
 - Complete booking workflow with ownership-scoped access control
-- Payment integration with Razorpay for secure transaction handling
-- Redis-backed caching for high-read package endpoints
+- Redis-backed caching for high-read package endpoints with explicit TTL strategies (10m/30m)
+- Cache invalidation coupled to package mutations, preventing stale inventory
+- Multi-environment configuration (dev/test/prod) with externalized secrets
 - Structured error handling and OpenAPI/Swagger documentation
 - Docker and Docker Compose configuration for containerized deployment
 
@@ -65,7 +66,7 @@ A production-grade Spring Boot backend for travel booking workflows, package inv
 | `user` | User registration, admin creation, role assignment |
 | `packages` | Package catalog, inventory lifecycle, cached reads |
 | `booking` | Booking creation, retrieval, ownership enforcement |
-| `payment` | Payment records, Razorpay integration, booking confirmation |
+| `payment` | Payment records, booking confirmation workflow |
 | `common` | Security, OpenAPI, cache config, exception handling |
 
 ---
@@ -73,12 +74,12 @@ A production-grade Spring Boot backend for travel booking workflows, package inv
 ### 2. Nexus | Workflow Execution Platform
 **Repository**: [nexus-backend](https://github.com/abinash-backend/nexus-backend)
 
-A backend platform for workflow execution, task orchestration, and execution lifecycle tracking. Designed for accountability and predictable state handling with clear domain separation.
+A backend platform for workflow execution, task orchestration, and execution lifecycle tracking. Designed for accountability and predictable state handling with clear domain separation and dual-layer idempotency enforcement.
 
 **Key Features**:
 - User-scoped task creation and retrieval with ownership enforcement
-- Execution logging with per-task, per-day tracking and idempotency guards
-- Composite database constraints preventing duplicate same-day execution entries
+- Execution logging with per-task, per-day tracking and dual-layer idempotency enforcement
+  (composite unique constraints + application-level validation)
 - Streak and consistency calculations from persisted execution history
 - Leaderboard-style user aggregation for consistency scoring
 - OpenAPI documentation for API consumers
@@ -88,12 +89,13 @@ A backend platform for workflow execution, task orchestration, and execution lif
 **Architecture Highlights**:
 - **Modular Monolith**: Domain-driven module separation with clear boundaries
 - **Workflow Model**: Task ownership with execution traceability and audit trails
+- **Idempotency**: Dual-layer enforcement (application validation + database constraints) preventing duplicate same-day execution
 - **Consistency**: Single-database transactional model with application-level validation
 - **Layered Flow**: Controller → Service → Repository → PostgreSQL
 - **API Documentation**: Springdoc OpenAPI with Swagger UI and bearer auth support
 
 **Tech Stack**:
-- Java 17 | Spring Boot 3.5.12 | Spring Security | JWT
+- Java 17 | Spring Boot 3.5 | Spring Security | JWT
 - PostgreSQL 15 | Spring Data JPA
 - Maven | Docker | GitHub Actions
 - OpenAPI/Swagger | JUnit 5, Mockito, Spring Security Test
@@ -113,7 +115,7 @@ A backend platform for workflow execution, task orchestration, and execution lif
 
 ### Backend
 ![Java](https://img.shields.io/badge/Java-17%20%2B%2021-ED8B00?style=flat&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.1.4%20%2B%203.5.12-6DB33F?style=flat&logo=spring-boot&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.1.4%20%2B%203.5-6DB33F?style=flat&logo=spring-boot&logoColor=white)
 ![Spring Security](https://img.shields.io/badge/Spring%20Security-JWT%20%2B%20RBAC-6DB33F?style=flat&logo=spring&logoColor=white)
 ![REST APIs](https://img.shields.io/badge/REST%20APIs-OpenAPI%2FSwagger-FF6B6B?style=flat&logo=api&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-JJWT%200.11.5-000000?style=flat&logo=JSON%20web%20tokens&logoColor=white)
@@ -140,8 +142,8 @@ A backend platform for workflow execution, task orchestration, and execution lif
 - **Domain-Driven Design (DDD)**: Explicit module ownership and responsibility
 - **Clean Architecture**: Layered separation of concerns (Controller → Service → Repository)
 - **SOLID Principles**: Single responsibility, dependency inversion, interface segregation
-- **System Design Patterns**: Caching strategies, transaction management, error handling
-- **Microservices-Ready**: Clear seams for future service extraction if scaling demands require
+- **System Design Patterns**: Caching strategies, transaction management, error handling, idempotency enforcement
+- **Modular Extraction Strategy**: Clear seams for future service extraction if scaling demands justify independent deployment
 
 ---
 
@@ -169,9 +171,10 @@ Both projects follow a modular monolith architecture, intentionally choosing a s
 
 Redis provides a backing store for Spring Cache:
 - Package reads cached with 10-30 minute TTLs
-- Cache invalidation coupled to package mutations
+- Cache invalidation coupled to package mutations (POST/PUT/DELETE operations)
 - JSON serialization for value storage
 - Null values excluded from cache
+- Measurable performance improvement on high-read endpoints
 
 ### Database Consistency
 
@@ -179,7 +182,14 @@ Redis provides a backing store for Spring Cache:
 - **Transaction Boundaries**: Service-layer `@Transactional` annotations
 - **Query Optimization**: `readOnly = true` for non-mutating paths
 - **Open-in-View Disabled**: Explicit persistence behavior prevents lazy-loading surprises
-- **Constraint Enforcement**: Database-level uniqueness constraints (e.g., duplicate execution prevention)
+- **Constraint Enforcement**: Database-level uniqueness constraints (e.g., duplicate execution prevention via composite keys)
+
+### Idempotency Enforcement (Nexus)
+
+Dual-layer approach ensuring correctness under concurrent request scenarios:
+- **Application Layer**: Service-level validation checks for existing records before accepting new operations
+- **Database Layer**: Composite unique constraints on `(task_id, date)` prevent duplicate inserts even if application layer is bypassed
+- **Result**: No distributed coordination required; single-database transactions handle idempotency elegantly
 
 ---
 
@@ -234,17 +244,13 @@ Both projects are designed with production readiness in mind:
 
 ---
 
-## Learning Focus
+## Next Learning & Growth Areas
 
-Currently focused on:
+To deepen expertise and prepare for increasing system complexity:
 
-- Advanced system design and architectural patterns for scale
-- Distributed systems concepts and eventual consistency models
-- Production-ready Spring Boot application development at scale
-- Cloud deployment patterns and infrastructure as code
-- API design best practices, versioning strategies, and backward compatibility
-- Event-driven architecture and async workflow patterns
-- Observability: structured logging, tracing, and metrics collection
+- Distributed systems patterns and eventual consistency models for potential future microservice extraction
+- Observability layer implementation (structured logging, distributed tracing, metrics collection)
+- Advanced PostgreSQL optimization, query planning, and indexing strategies
 
 ---
 
@@ -272,4 +278,4 @@ Currently focused on:
 
 ---
 
-*Last updated: 2026-05-22*
+*Last updated: 2026-05-23*
