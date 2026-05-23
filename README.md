@@ -1,6 +1,6 @@
 # Abinash Nayak
 
-**Backend Engineer | Java | Spring Boot | System Design**
+Spring Boot Backend Engineer | Transactional Systems | REST APIs | PostgreSQL
 
 Based in India | MCA – Biju Patnaik University of Technology (BPUT), 2024
 
