@@ -8,7 +8,7 @@ Based in India | MCA — Biju Patnaik University of Technology (BPUT), 2023
 
 ## Introduction
 
-Backend engineer specializing in production-oriented Spring Boot systems with emphasis on transactional consistency, modular architecture, security, and deployment ownership.
+Backend engineer specializing in production-ready Spring Boot systems with emphasis on transactional consistency, modular architecture, security, and deployment ownership.
 
 Built backend platforms focused on workflow execution, booking management, RBAC authorization, Redis caching, Dockerized deployment, and PostgreSQL-driven transactional workflows.
 
@@ -16,16 +16,16 @@ Currently focused on backend architecture, observability, distributed systems pa
 
 ---
 
-## Core Focus Areas
+# Core Focus Areas
 
 * Transactional backend systems
 * Modular monolith architecture
-* REST API design and security
+* REST API design and backend security
 * RBAC authorization with Spring Security
 * Redis caching and invalidation strategies
 * PostgreSQL schema design and query optimization
 * Dockerized deployment and CI/CD workflows
-* Production-oriented backend engineering practices
+* Production-ready backend engineering practices
 
 ---
 
@@ -35,7 +35,7 @@ Currently focused on backend architecture, observability, distributed systems pa
 
 Repository: github.com/abinash-backend/nexus-backend
 
-Production-oriented backend platform for workflow execution tracking and operational accountability.
+Production-ready backend platform for workflow execution tracking and operational accountability.
 
 ### Highlights
 
@@ -44,10 +44,11 @@ Production-oriented backend platform for workflow execution tracking and operati
 * Execution history tracking, leaderboard aggregation, and streak computation
 * OpenAPI/Swagger integration for API documentation
 * Dockerized deployment with PostgreSQL integration and health monitoring
+* Live AWS deployment with CI/CD workflow integration
 
 ### Tech Stack
 
-Java 17 • Spring Boot • Spring Security • PostgreSQL • Docker • GitHub Actions
+Java 17 • Spring Boot • Spring Security • PostgreSQL • Docker • GitHub Actions • AWS
 
 ---
 
@@ -55,7 +56,7 @@ Java 17 • Spring Boot • Spring Security • PostgreSQL • Docker • GitHub
 
 Repository: github.com/abinash-backend/tripops-backend
 
-Production-oriented Spring Boot backend for booking workflows, package management, RBAC authorization, and Redis-backed caching.
+Production-ready Spring Boot backend for booking workflows, package management, RBAC authorization, and Redis-backed caching.
 
 ### Highlights
 
@@ -64,16 +65,17 @@ Production-oriented Spring Boot backend for booking workflows, package managemen
 * Modular backend architecture with explicit domain boundaries
 * PostgreSQL transactional workflows and structured exception handling
 * Docker Compose deployment and OpenAPI documentation
+* Live AWS deployment with environment-based configuration management
 
 ### Tech Stack
 
-Java 21 • Spring Boot • PostgreSQL • Redis • Docker • GitHub Actions
+Java 21 • Spring Boot • PostgreSQL • Redis • Docker • GitHub Actions • AWS
 
 ---
 
-## Architecture & Engineering Approach
+# Architecture & Engineering Approach
 
-My projects follow modular backend architecture with clear domain separation, transactional consistency, and production-oriented deployment practices.
+My projects follow modular backend architecture with clear domain separation, transactional consistency, and production-ready deployment practices.
 
 I prefer designing systems based on engineering trade-offs and operational simplicity rather than unnecessary architectural complexity.
 
@@ -87,7 +89,7 @@ Primary areas of interest:
 
 ---
 
-## Tech Stack
+# Tech Stack
 
 ### Backend
 
@@ -99,7 +101,7 @@ PostgreSQL • Redis • Hibernate/JPA
 
 ### DevOps & Tooling
 
-Docker • GitHub Actions • Maven • Git
+Docker • GitHub Actions • Maven • Git • AWS
 
 ### Testing
 
@@ -107,7 +109,14 @@ JUnit 5 • Mockito • MockMvc
 
 ---
 
-## GitHub Repositories
+# Live Deployments
+
+* Nexus Backend API — AWS Deployed
+* TripOps Backend API — AWS Deployed
+
+---
+
+# GitHub Repositories
 
 * TripOps Backend
   github.com/abinash-backend/tripops-backend
@@ -120,7 +129,7 @@ JUnit 5 • Mockito • MockMvc
 
 ---
 
-## Connect
+# Connect
 
 LinkedIn: linkedin.com/in/abinash-backend
 Portfolio: abinash-nayak-portfolio.netlify.app
