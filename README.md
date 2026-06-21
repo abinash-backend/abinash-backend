@@ -1,107 +1,103 @@
 # Abinash Nayak
 
-Backend Engineer | Spring Boot · PostgreSQL · Redis · AWS | Transactional & Modular Systems
+Backend Engineer | Java 17/21 | Spring Boot 3 | Microservices | Apache Kafka | PostgreSQL | Docker | AWS
 
-Based in India | MCA — Biju Patnaik University of Technology (BPUT), 2023
-
----
-
-## Introduction
-
-Backend engineer specializing in production-ready Spring Boot systems with emphasis on transactional consistency, modular architecture, security, and deployment ownership.
-
-Built backend platforms focused on workflow execution, booking management, RBAC authorization, Redis caching, Dockerized deployment, and PostgreSQL-driven transactional workflows.
-
-Currently focused on backend architecture, observability, distributed systems patterns, and performance-oriented backend engineering.
+Based in India | MCA, Biju Patnaik University of Technology (2023)
 
 ---
 
-# Core Focus Areas
+## About Me
 
-* Transactional backend systems
-* Modular monolith architecture
-* REST API design and backend security
-* RBAC authorization with Spring Security
-* Redis caching and invalidation strategies
-* PostgreSQL schema design and query optimization
-* Dockerized deployment and CI/CD workflows
-* Production-ready backend engineering practices
+Backend-focused engineer building production-ready systems from design and development to deployment and monitoring.
+
+Built and deployed TripOps, a travel booking platform implementing JWT authentication, RBAC authorization, Redis caching, Docker-based deployment, AWS EC2 hosting, CI/CD automation, and observability using Prometheus and Grafana.
+
+Built Nexus, a 4-service microservices platform using Spring Cloud Gateway, Netflix Eureka, Apache Kafka, OpenFeign, PostgreSQL, and Flyway. Implemented 17 REST APIs and 10 Kafka domain events supporting event-driven communication across services.
+
+Interested in backend architecture, distributed systems, cloud deployment, observability, and scalable API platforms.
 
 ---
 
-# Featured Projects
+## Core Expertise
 
-## Nexus — Workflow Execution Platform
+* Java 17/21 & Spring Boot 3
+* REST API Design & Development
+* Microservices Architecture
+* Apache Kafka & Event-Driven Systems
+* Spring Security, JWT & RBAC
+* PostgreSQL & Data Modeling
+* Redis Caching
+* Docker & CI/CD Automation
+* AWS EC2 Deployment
+* Observability with Prometheus & Grafana
+
+---
+
+## Featured Projects
+
+### Nexus — Microservices Platform
 
 Repository: github.com/abinash-backend/nexus-backend
 
-Production-ready backend platform for workflow execution tracking and operational accountability.
+4-service microservices platform consisting of Identity, Task, Execution, and Notification services.
 
-### Highlights
+#### Highlights
 
-* Dual-layer idempotency enforcement using application validation and database constraints
-* Ownership-based authorization with transactional consistency
-* Execution history tracking, leaderboard aggregation, and streak computation
-* OpenAPI/Swagger integration for API documentation
-* Dockerized deployment with PostgreSQL integration and health monitoring
-* Live AWS deployment with CI/CD workflow integration
+* Spring Cloud Gateway for centralized API routing
+* Netflix Eureka for service discovery
+* Apache Kafka for asynchronous event-driven communication
+* OpenFeign for synchronous service-to-service communication
+* 17 REST APIs implemented across services
+* 10 Kafka domain events supporting distributed workflows
+* JWT authentication, refresh-token security, and RBAC
+* PostgreSQL databases with Flyway-managed migrations
+* Dockerized deployment architecture
 
-### Tech Stack
-
-Java 17 • Spring Boot • Spring Security • PostgreSQL • Docker • GitHub Actions • AWS
+**Tech Stack:** Java 21, Spring Boot 3, Spring Cloud Gateway, Netflix Eureka, Apache Kafka, OpenFeign, PostgreSQL, Flyway, Docker
 
 ---
 
-## TripOps — Booking & Inventory Platform
+### TripOps — Travel Booking Platform
 
 Repository: github.com/abinash-backend/tripops-backend
 
-Production-ready Spring Boot backend for booking workflows, package management, RBAC authorization, and Redis-backed caching.
+Production-style travel booking and inventory management platform.
 
-### Highlights
+#### Highlights
 
 * JWT authentication and role-based access control
-* Redis caching with TTL-based invalidation strategies
-* Modular backend architecture with explicit domain boundaries
-* PostgreSQL transactional workflows and structured exception handling
-* Docker Compose deployment and OpenAPI documentation
-* Live AWS deployment with environment-based configuration management
+* Redis caching with TTL-based invalidation
+* PostgreSQL persistence layer
+* Dockerized deployment
+* AWS EC2 hosting with Nginx reverse proxy
+* GitHub Actions CI/CD automation
+* Prometheus monitoring and Grafana dashboards
 
-### Tech Stack
-
-Java 21 • Spring Boot • PostgreSQL • Redis • Docker • GitHub Actions • AWS
-
----
-
-# Architecture & Engineering Approach
-
-My projects follow modular backend architecture with clear domain separation, transactional consistency, and production-ready deployment practices.
-
-I prefer designing systems based on engineering trade-offs and operational simplicity rather than unnecessary architectural complexity.
-
-Primary areas of interest:
-
-* Transactional workflow systems
-* Backend architecture and API design
-* Observability and operational monitoring
-* PostgreSQL optimization and query planning
-* Distributed systems patterns
+**Tech Stack:** Java 17, Spring Boot 3, Spring Security, PostgreSQL, Redis, Docker, Nginx, AWS EC2, GitHub Actions, Prometheus, Grafana
 
 ---
 
-# Tech Stack
+## Tech Stack
 
 ### Backend
 
-Java • Spring Boot • Spring Security • REST APIs • JWT
+Java • Spring Boot • Spring Security • REST APIs • JWT • RBAC
 
-### Database & Cache
+### Microservices & Messaging
 
-PostgreSQL • Redis • Hibernate/JPA
+Apache Kafka • Spring Cloud Gateway • Netflix Eureka • OpenFeign
 
-### DevOps & Tooling
+### Database & Caching
 
-Docker • GitHub Actions • Maven • Git • AWS
+PostgreSQL • Redis • Hibernate • Spring Data JPA • Flyway
+
+### DevOps & Infrastructure
+
+Docker • GitHub Actions • AWS EC2 • Linux • Nginx
+
+### Monitoring
+
+Prometheus • Grafana
 
 ### Testing
 
@@ -109,27 +105,10 @@ JUnit 5 • Mockito • MockMvc
 
 ---
 
-# Live Deployments
-
-* Nexus Backend API — AWS Deployed
-* TripOps Backend API — AWS Deployed
-
----
-
-# GitHub Repositories
-
-* TripOps Backend
-  github.com/abinash-backend/tripops-backend
-
-* Nexus Backend
-  github.com/abinash-backend/nexus-backend
-
-* Portfolio
-  abinash-nayak-portfolio.netlify.app
-
----
-
-# Connect
+## Connect
 
 LinkedIn: linkedin.com/in/abinash-backend
+
 Portfolio: abinash-nayak-portfolio.netlify.app
+
+GitHub: github.com/abinash-backend
