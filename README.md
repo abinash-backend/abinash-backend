@@ -1,6 +1,6 @@
 # Abinash Nayak
 
-Backend Engineer | Java 17/21 | Spring Boot 3 | Microservices | Apache Kafka | PostgreSQL | Docker | AWS
+Java Backend Developer | Java Full Stack Developer | Spring Boot | React.js | Microservices | Apache Kafka | AWS
 
 Based in India | MCA — Biju Patnaik University of Technology (2023)
 
@@ -8,53 +8,112 @@ Based in India | MCA — Biju Patnaik University of Technology (2023)
 
 ## About
 
-Backend-focused engineer building production-ready systems from development to deployment and monitoring.
+Java Backend Developer with 2.4 years of experience developing production-grade applications using Java, Spring Boot, and Microservices.
 
-Built and deployed TripOps, a travel booking platform implementing JWT authentication, RBAC authorization, Redis caching, Docker-based deployment, AWS hosting, CI/CD automation, and observability using Prometheus and Grafana.
+I build scalable REST APIs, event-driven systems, and cloud-native applications with a focus on performance, reliability, and maintainability. My experience includes Apache Kafka, PostgreSQL, Redis, MongoDB, Elasticsearch, AWS, Docker, Kubernetes, and CI/CD, along with React.js and JavaScript for full-stack application development.
 
-Built Nexus, a 4-service microservices platform using Spring Cloud Gateway, Netflix Eureka, Apache Kafka, OpenFeign, PostgreSQL, and Flyway. Implemented 17 REST APIs and 10 Kafka domain events supporting event-driven communication across distributed services.
+Professionally, I contribute to enterprise IoT and B2B applications involving distributed backend services, real-time telemetry workflows, data access optimization, caching, and cloud-native deployments.
 
-Interested in backend architecture, distributed systems, cloud infrastructure, observability, and scalable API platforms.
+Independently, I designed, developed, and deployed Nexus, a production-grade distributed workflow execution platform built with 6+ microservices, event-driven communication, secure REST APIs, React.js, containerized deployment, CI/CD, and AWS cloud infrastructure.
 
 ---
 
 ## Core Expertise
 
-* Java 17/21 & Spring Boot 3
+### Backend Engineering
+
+* Java 17/21
+* Spring Boot 3
 * REST API Design & Development
 * Microservices Architecture
-* Apache Kafka & Event-Driven Systems
 * Spring Security, JWT & RBAC
-* PostgreSQL & Data Modeling
-* Redis Caching
-* Docker & CI/CD Automation
-* AWS Cloud Deployment
-* Observability with Prometheus & Grafana
+* Hibernate & Spring Data JPA
+
+### Distributed Systems & Data
+
+* Apache Kafka & Event-Driven Architecture
+* PostgreSQL
+* Redis
+* MongoDB
+* Elasticsearch
+* Flyway Database Migrations
+
+### Full Stack Development
+
+* React.js
+* JavaScript
+* REST API Integration
+
+### Cloud & DevOps
+
+* AWS
+* Docker
+* Kubernetes
+* GitHub Actions
+* CI/CD Automation
+* Linux & Nginx
 
 ---
 
-## Featured Projects
+## Featured Project
 
-### Nexus — Microservices Platform
+### Nexus — Distributed Workflow Execution Platform
 
-4-service distributed system consisting of Identity, Task, Execution, and Notification services.
+Production-grade workflow execution platform designed and developed using a 6+ microservices architecture.
 
-#### Highlights
+#### Architecture & Backend
 
 * Spring Cloud Gateway for centralized API routing
 * Netflix Eureka for service discovery
-* Apache Kafka for asynchronous communication
-* OpenFeign for service-to-service interactions
-* 17 REST APIs across multiple services
-* 10 Kafka domain events supporting distributed workflows
+* Apache Kafka for asynchronous event-driven communication
+* OpenFeign for synchronous inter-service communication
+* Secure REST APIs across distributed services
 * JWT authentication and refresh-token security
-* Role-based authorization (RBAC)
-* PostgreSQL databases with Flyway-managed migrations
-* Dockerized deployment architecture
+* Role-Based Access Control (RBAC)
+* PostgreSQL databases with Flyway-managed schema migrations
+* Redis-backed high-frequency data access
 
-**Tech Stack:** Java 21, Spring Boot 3, Spring Cloud Gateway, Netflix Eureka, Apache Kafka, OpenFeign, PostgreSQL, Flyway, Docker
+#### Frontend
+
+* React.js application for workflow and task management
+* Secure authentication and protected routes
+* REST API integration with distributed backend services
+* Production-focused dashboard and application workflows
+
+#### Cloud & Delivery
+
+* Dockerized frontend and backend services
+* Kubernetes-based container orchestration
+* AWS cloud deployment
+* GitHub Actions CI/CD automation
+* Versioned container deployment workflow
+
+**Tech Stack:** Java 21, Spring Boot 3, React.js, JavaScript, Spring Cloud Gateway, Netflix Eureka, Apache Kafka, OpenFeign, PostgreSQL, Redis, Flyway, Docker, Kubernetes, GitHub Actions, AWS
 
 ---
+
+## Professional Project
+
+### TelemetryPulse — Enterprise IoT & B2B Fleet Management Platform
+
+Contributing to an enterprise IoT and B2B platform processing real-time GPS and sensor telemetry for industrial asset tracking.
+
+#### Engineering Contributions
+
+* Developed and enhanced backend services using Java and Spring Boot
+* Worked within a distributed microservices architecture
+* Supported real-time telemetry ingestion and enterprise workflows
+* Optimized PostgreSQL data access for application performance
+* Used Redis for high-frequency data access
+* Supported multi-tenant application workflows
+* Contributed to geofencing, asset-state computation, and telemetry auditing
+* Supported cloud-native deployments using AWS, Docker, and Kubernetes
+
+**Tech Stack:** Java, Spring Boot, Microservices, REST APIs, PostgreSQL, Redis, Apache Kafka, Docker, Kubernetes, AWS
+
+---
+
+## Additional Project
 
 ### TripOps — Travel Booking Platform
 
@@ -62,86 +121,77 @@ Production-style travel booking and inventory management platform.
 
 #### Highlights
 
-* JWT authentication and role-based access control
+* JWT authentication and Role-Based Access Control
 * Redis caching with TTL-based invalidation
-* PostgreSQL persistence layer
+* PostgreSQL persistence
 * Dockerized deployment
 * AWS EC2 hosting with Nginx reverse proxy
 * GitHub Actions CI/CD automation
 * Prometheus monitoring and Grafana dashboards
-* Secure REST API architecture
 
-**Tech Stack:** Java 17, Spring Boot 3, Spring Security, PostgreSQL, Redis, Docker, Nginx, AWS EC2, GitHub Actions, Prometheus, Grafana
+**Tech Stack:** Java 17, Spring Boot 3, Spring Security, PostgreSQL, Redis, Docker, AWS EC2, Nginx, GitHub Actions, Prometheus, Grafana
 
 ---
 
-## Engineering Principles
+## Engineering Focus
 
-### Microservices & Service Boundaries
+### Scalable Backend Systems
 
-Design services around clear ownership, independent deployment, and maintainable boundaries.
+Design maintainable backend services and REST APIs around clear responsibilities and scalable architecture.
 
-### Event-Driven Communication
+### Event-Driven Architecture
 
-Use Apache Kafka to decouple services and support asynchronous workflows.
+Use Apache Kafka to decouple distributed services and support asynchronous workflows.
 
-### Security First
+### Security
 
-Implement authentication, authorization, JWT security, RBAC, and secure API design practices.
+Implement authentication, authorization, JWT security, RBAC, and secure API communication.
 
-### Observability
+### Data & Performance
 
-Monitor application health, JVM metrics, and operational behavior using Prometheus and Grafana.
+Design data access layers using PostgreSQL, Redis, MongoDB, and Elasticsearch with a focus on performance and scalability.
 
-### Cloud Deployment
+### Cloud-Native Delivery
 
-Deploy and manage applications using Docker, AWS EC2, Linux, and Nginx reverse proxy infrastructure.
+Containerize applications with Docker, orchestrate deployments with Kubernetes, and deploy workloads on AWS.
 
-### Automation
+### CI/CD Automation
 
-Use GitHub Actions and CI/CD pipelines to automate build, test, and deployment workflows.
+Use GitHub Actions to automate build, test, containerization, and deployment workflows.
 
 ---
 
 ## Technology Stack
 
-### Backend
+**Languages:** Java • JavaScript • SQL
 
-Java • Spring Boot • Spring Security • REST APIs • JWT • RBAC
+**Backend:** Spring Boot • Spring Security • REST APIs • Microservices • Hibernate • Spring Data JPA
 
-### Microservices & Messaging
+**Frontend:** React.js
 
-Apache Kafka • Spring Cloud Gateway • Netflix Eureka • OpenFeign
+**Messaging:** Apache Kafka
 
-### Database & Caching
+**Data:** PostgreSQL • Redis • MongoDB • Elasticsearch • Flyway
 
-PostgreSQL • Redis • Hibernate • Spring Data JPA • Flyway
+**Cloud & DevOps:** AWS • Docker • Kubernetes • GitHub Actions • Linux • Nginx
 
-### DevOps & Infrastructure
+**Testing:** JUnit 5 • Mockito • MockMvc • Postman
 
-Docker • GitHub Actions • AWS EC2 • Linux • Nginx
-
-### Monitoring
-
-Prometheus • Grafana
-
-### Testing
-
-JUnit 5 • Mockito • MockMvc • Postman
+**Observability:** Prometheus • Grafana
 
 ---
 
-## Live Projects
+## Live Engineering Work
 
-* Nexus Microservices Platform
-* TripOps Travel Booking Platform
+* Nexus — Distributed Workflow Execution Platform
+* Backend Engineering Portfolio
 
 ---
 
 ## Connect
 
-GitHub: github.com/abinash-backend
+**Portfolio:** https://abinashbackend.com
 
-LinkedIn: linkedin.com/in/abinash-backend
+**LinkedIn:** https://www.linkedin.com/in/abinash-backend/
 
-Portfolio: abinash-nayak-portfolio.netlify.app
+**GitHub:** https://github.com/abinash-backend
